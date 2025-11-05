@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/imc.js"></script>
     <title>Teste - IMC</title>
 </head>
 <body>
+
+    <h1>Calculo IMC:</h1>
+
+    <label for="altura">Altura: </label>
+    <input type="number" name="altura" id="altura" required="required">
+
+    <label for="peso">Peso: </label>
+    <input type="number" name="peso" id="peso" required="required">
+
+    
+
+    <p id="valorImc"></p>
+    <p id="classificacao"></p>
+
+    <button onclick="mostrarImc()">Calcular</button>
     
 </body>
 </html>
