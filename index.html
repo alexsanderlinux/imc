@@ -8,21 +8,36 @@
     <title>Teste - IMC</title>
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Calculo IMC:</h1>
+    </header>
+    <!-- Conteúdo principal -->
+    <main>    
+        <section>
+            <h2>Insira seus dados para calcular o IMC: </h2>
 
-    <h1>Calculo IMC:</h1>
+            <fieldset>
 
-    <label for="altura">Altura: </label>
-    <input type="number" name="altura" id="altura" required="required">
+                <label for="altura">Altura: </label>
+                <input type="number" name="altura" id="altura" required="required">
 
-    <label for="peso">Peso: </label>
-    <input type="number" name="peso" id="peso" required="required">
+                <label for="peso">Peso: </label>
+                <input type="number" name="peso" id="peso" required="required">
 
-    
+                <p id="valorImc"></p>
+                <p id="classificacao"></p>
 
-    <p id="valorImc"></p>
-    <p id="classificacao"></p>
+                <button id="calcular" onclick="mostrarImc()">Calcular</button>
 
-    <button onclick="mostrarImc()">Calcular</button>
+            </fieldset> 
+        </section>       
+
+    </main>
+    <!-- Rodapé -->
+    <footer>
+        <p class="copy">&copy;   2025 - Alexsander Vinicius - Todos os direitos reservados.</p>
+    </footer>
     
 </body>
 </html>
