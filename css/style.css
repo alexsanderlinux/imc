@@ -108,6 +108,9 @@ input[type="number"]{
     border-radius: 5px; /* Cantos arredondados */
     text-align: center; /* Centraliza o texto */
     font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
+    background-color: #f0f0f0; /* Fundo levemente cinza */
+    border: 1px solid #ccc;
 }
 
 /* Estilo para a linha do resultado do IMC (o valor) */
@@ -118,6 +121,9 @@ input[type="number"]{
     border-radius: 5px; /* Cantos arredondados */
     text-align: center; /* Centraliza o texto */
     font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
+    background-color: #f0f0f0; /* Fundo levemente cinza */
+    border: 1px solid #ccc;
 }
 
 /*Rodapé*/
