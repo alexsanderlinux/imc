@@ -1,42 +1,42 @@
-
 function calcularImc(peso, altura){
 
-    let avalicaco = null;
     let recPeso = peso;
     let recAltura = altura;
     const quatroCasas = 10000;
-
+    let classificacao = null;
+    let arrayResultado = [];
+       
     let resultadoImc = recPeso / (recAltura * recAltura) * quatroCasas; 
 
     let formatacaoImc = resultadoImc.toFixed(2);
 
     if(resultadoImc < 18.5){
 
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com baixo peso.`;
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "baixo peso.")}`;
     
     }else if(resultadoImc > 18.6 && resultadoImc < 24.9){
 
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com peso normal.`;
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "baixo normal.")}`;
 
     }else if(resultadoImc > 25 && resultadoImc < 29.9){
-
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com sobrepeso.`;
-
+        
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "sobrepeso.")}`;
+    
     }else if(resultadoImc > 30 && resultadoImc < 34.9){
 
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com obesidade grau I.`;
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "obesidade grau I.")}`;
 
     }else if(resultadoImc > 35 && resultadoImc < 39.9){
 
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com obesidade grau II.`;
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "obesidade grau II.")}`;
 
     }else if(resultadoImc > 40){
 
-        avalicaco = `O valor do seu IMC é ${formatacaoImc} e você esta com obesidade grau III.`;
+        `${arrayResultado.push(formatacaoImc)}. ${arrayResultado.push(classificacao = "obesidade grau III.")}`;
 
     }
 
-    return avalicaco;
+    return arrayResultado;
 }
 
 
@@ -49,9 +49,10 @@ function mostrarImc(){
     //Processamento
     let recCalcularImc =  calcularImc(peso, altura);
 
-
     //Saída
-    console.log(recCalcularImc);
+    document.getElementById("valorImc").textContent = `Resultado IMC: ${recCalcularImc[0]}`;
+    document.getElementById("classificacao").textContent = `Classificacão IMC: ${recCalcularImc[1]}`;
+    
     
 
 }
